@@ -1,0 +1,2 @@
+serviceClass: edu.unlv.cs673.whoseturn.client.GreetingService
+path: 21493AE6537E26EF5F31E89965212847.gwt.rpc
