@@ -1,0 +1,88 @@
+instance: unlvwhoseturndb:whoseturn
+database: whoseturn
+
+--drop database whoseturn;
+--create database whoseturn;
+use whoseturn;
+
+create TABLE Strategy(
+	StrategyID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	StrategyName VARCHAR(100),
+	Deleted int
+);
+
+create TABLE Users(
+	UserID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	UserName VARCHAR(100),
+	UserEmail VARCHAR(100),
+	UserDescription VARCHAR(255),
+	Admin int,
+	AvatarBlob mediumBlob,
+	LieCount int,
+	Deleted int
+);
+
+create TABLE Category(
+	CategoryID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	CategoryName VARCHAR(100),
+	StrategyId int,
+	TimeBoundaryInHours int,
+	Deleted int
+);
+
+create TABLE Turn(
+	TurnID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	TurnDateAndTime DateTime,
+	CategoryId int,
+	InitiatedId int,
+	Deleted int
+);
+
+create TABLE TurnItem(
+	TurnItemID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	TurnID int,
+	UserID int,
+	Selected int,
+	Vote int,
+	Deleted int
+);
+
+create TABLE Badge(
+	BadgeID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	BadgeName VARCHAR(100),
+	BadgeDescription VARCHAR(255),
+	BadgeCriteria VARCHAR(255),
+	Deleted int
+);
+
+create TABLE BadgeAwarded(
+	BadgeAwardedID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	BadgeID int,
+	UserID int,
+	Deleted int
+);
+
+
+Select * from Users;
+
+insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted) 
+VALUES('root', 'james.oravec@gmail.com', 'A cool dude', 1, 0, 0);
+
+insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted) 
+VALUES('root', 'dabinett@unlv.nevada.edu', 'A cool dude', 1, 0, 0);
+insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted) 
+VALUES('root', 'benallyc@unlv.nevada.edu', 'A cool dude', 1, 0, 0);
+insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted) 
+VALUES('root', 'pavone@unlv.nevada.edu', 'A cool dude', 1, 0, 0);
+insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted) 
+VALUES('root', 'strongd@unlv.nevada.edu', 'A cool dude', 1, 0, 0);
+insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted) 
+VALUES('root', 'lombar40@unlv.nevada.edu', 'A cool dude', 1, 0, 0);
+insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted) 
+VALUES('root', 'kyriobs@gmail.com', 'A cool dude', 1, 0, 0);
+insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted) 
+VALUES('root', 'dieckma3@unlv.nevada.edu', 'A cool dude', 1, 0, 0);
+insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted) 
+VALUES('root', 'solisa7@unlv.nevada.edu', 'A cool dude', 1, 0, 0);
+insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted) 
+VALUES('root', 'shawncannon07@yahoo.com', 'A cool dude', 1, 0, 0);
