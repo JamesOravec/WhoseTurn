@@ -1,5 +1,7 @@
 package edu.unlv.cs673.whoseturn.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -8,7 +10,7 @@ import javax.validation.constraints.Size;
 import com.google.appengine.api.datastore.Blob;
 
 @Entity
-public class User {
+public class User implements Serializable {
 //	UserID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 //	UserName VARCHAR(100),
 //	UserEmail VARCHAR(100),

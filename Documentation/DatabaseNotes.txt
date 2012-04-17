@@ -86,3 +86,22 @@ insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted
 VALUES('root', 'solisa7@unlv.nevada.edu', 'A cool dude', 1, 0, 0);
 insert into Users(UserName, UserEmail, UserDescription, Admin, LieCount, Deleted) 
 VALUES('root', 'shawncannon07@yahoo.com', 'A cool dude', 1, 0, 0);
+
+show databases;
+show tables;
+
+
+Objectify jar:
+http://code.google.com/p/objectify-appengine/downloads/detail?name=objectify-3.1.zip
+
+Objectify app-engine:
+http://code.google.com/p/objectify-appengine/
+	Objectify ofy = ObjectifyService.begin();
+	ofy.put(new Car("123123", "red"));
+	Car c = ofy.get(Car.class, "123123");
+	ofy.delete(c);
+
+Objectify Tutorial:
+http://www.fishbonecloud.com/2010/11/use-objectify-to-store-data-in-google.html
+
+

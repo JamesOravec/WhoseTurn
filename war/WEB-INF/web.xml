@@ -22,20 +22,21 @@
 		<servlet-name>guestbook</servlet-name>
 		<url-pattern>/guestbook</url-pattern>
 	</servlet-mapping>
-	
+
+	<!-- Example from: http://www.fishbonecloud.com/2010/11/use-objectify-to-store-data-in-google.html -->
 	<servlet>
-		<servlet-name>helloworld</servlet-name>
-		<servlet-class>edu.unlv.cs673.whoseturn.exmaples.jamesoravec.HelloWorldServlet</servlet-class>
+		<servlet-name>persistenceServlet</servlet-name>
+		<servlet-class>edu.unlv.cs673.whoseturn.server.PersistentServiceImpl</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>helloworld</servlet-name>
-		<url-pattern>/helloworld</url-pattern>
+		<servlet-name>persistenceServlet</servlet-name>
+		<url-pattern>/objectifyexample/persistentservice</url-pattern>
 	</servlet-mapping>
-	
+
 
 	<!-- Default page to serve -->
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>WhoseTurn.html</welcome-file>
 	</welcome-file-list>
 
 </web-app>

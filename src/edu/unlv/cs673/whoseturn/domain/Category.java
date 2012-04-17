@@ -1,5 +1,7 @@
 package edu.unlv.cs673.whoseturn.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -10,7 +12,7 @@ import javax.validation.constraints.Size;
 import com.google.appengine.api.datastore.Blob;
 
 @Entity
-public class Category {
+public class Category implements Serializable {
 //	CategoryID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 //	CategoryName VARCHAR(100),
 //	StrategyId int,

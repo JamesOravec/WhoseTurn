@@ -1,5 +1,7 @@
 package edu.unlv.cs673.whoseturn.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
@@ -7,7 +9,7 @@ import javax.persistence.OneToOne;
 import com.google.appengine.api.datastore.Blob;
 
 @Entity
-public class TurnItem {
+public class TurnItem implements Serializable {
 //	TurnItemID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 //	TurnID int,
 //	UserID int,

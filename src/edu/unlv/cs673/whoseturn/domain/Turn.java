@@ -1,5 +1,6 @@
 package edu.unlv.cs673.whoseturn.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -9,7 +10,7 @@ import javax.persistence.OneToOne;
 import com.google.appengine.api.datastore.Blob;
 
 @Entity
-public class Turn {
+public class Turn implements Serializable {
 //	TurnID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 //	TurnDateAndTime DateTime,
 //	CategoryId int,
