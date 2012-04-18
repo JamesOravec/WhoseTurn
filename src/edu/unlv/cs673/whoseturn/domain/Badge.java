@@ -5,8 +5,6 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import com.google.appengine.api.datastore.Blob;
-
 @Entity
 public class Badge implements Serializable {
 //	BadgeID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -14,6 +12,11 @@ public class Badge implements Serializable {
 //	BadgeDescription VARCHAR(255),
 //	BadgeCriteria VARCHAR(255),
 //	Deleted int
+    
+    /**
+	 * Default serial version uid. 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	Long badgeId;

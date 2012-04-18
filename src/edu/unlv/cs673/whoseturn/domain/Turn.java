@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-import com.google.appengine.api.datastore.Blob;
-
 @Entity
 public class Turn implements Serializable {
 //	TurnID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -16,6 +14,11 @@ public class Turn implements Serializable {
 //	CategoryId int,
 //	InitiatedId int,
 //	Deleted int
+    
+    /**
+	 * Default serial version uid. 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	Long turnId;

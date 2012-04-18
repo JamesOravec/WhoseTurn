@@ -9,30 +9,20 @@
 		<servlet-name>greetServlet</servlet-name>
 		<servlet-class>edu.unlv.cs673.whoseturn.server.GreetingServiceImpl</servlet-class>
 	</servlet>
-	<servlet-mapping>
-		<servlet-name>greetServlet</servlet-name>
-		<url-pattern>/whoseturn/greet</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>guestbook</servlet-name>
-		<servlet-class>guestbook.GuestbookServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>guestbook</servlet-name>
-		<url-pattern>/guestbook</url-pattern>
-	</servlet-mapping>
-
-	<!-- Example from: http://www.fishbonecloud.com/2010/11/use-objectify-to-store-data-in-google.html -->
 	<servlet>
 		<servlet-name>persistenceServlet</servlet-name>
 		<servlet-class>edu.unlv.cs673.whoseturn.server.PersistentServiceImpl</servlet-class>
 	</servlet>
+
+	<!-- Servlet Mappings -->
+	<servlet-mapping>
+		<servlet-name>greetServlet</servlet-name>
+		<url-pattern>/whoseturn/greet</url-pattern>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>persistenceServlet</servlet-name>
 		<url-pattern>/objectifyexample/persistentservice</url-pattern>
 	</servlet-mapping>
-
 
 	<!-- Default page to serve -->
 	<welcome-file-list>

@@ -2,14 +2,9 @@ package edu.unlv.cs673.whoseturn.domain;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-import com.google.appengine.api.datastore.Blob;
 
 @Entity
 public class Category implements Serializable {
@@ -18,6 +13,11 @@ public class Category implements Serializable {
 //	StrategyId int,
 //	TimeBoundaryInHours int,
 //	Deleted int
+    
+    /**
+	 * Default serial version uid. 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	Long categoryId;

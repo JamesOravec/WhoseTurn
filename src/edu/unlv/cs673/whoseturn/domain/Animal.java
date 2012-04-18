@@ -9,7 +9,13 @@ import javax.persistence.Id;
 @Entity
 public class Animal implements Serializable {
     
-    @Id
+    /**
+	 * Default serial version uid. 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	
+	@Id
     Long id;
     private String species;
     private String color;

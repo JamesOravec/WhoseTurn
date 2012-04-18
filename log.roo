@@ -1,7 +1,0 @@
-// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-15 08:51:37
-help
-hint
-project --topLevelPackage edu.unlv.cs673.whoseturn
-hint
-jpa setup --database GOOGLE_APP_ENGINE --provider HIBERNATE 
-jpa setup --database GOOGLE_APP_ENGINE --provider DATANUCLEUS

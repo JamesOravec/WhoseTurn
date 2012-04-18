@@ -12,6 +12,11 @@ public class BadgeAwarded implements Serializable {
 //	BadgeID int,
 //	UserID int,
 //	Deleted int
+    
+    /**
+	 * Default serial version uid. 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	Long badgeAwardedId;
